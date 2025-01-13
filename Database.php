@@ -16,11 +16,11 @@ class Database {
     ]);
   }
 
-  public function query($query) {
+  public function query($query, $params = []) {
     
     $statemnt = $this->connection->prepare($query);
 
-    $statemnt->execute();
+    $statemnt->execute($params);
 
     return $statemnt;
 
