@@ -7,13 +7,16 @@
     <div class="collapse navbar-collapse" id="navbarNav">
       <ul class="navbar-nav">
         <li class="nav-item">
-          <a class="nav-link active" aria-current="page" href="<?php echo BASE_URL; ?>">Home</a>
+          <a class="nav-link <?= urlIs(BASE_APP . '/') ? "active" : "" ?>" href="<?php echo BASE_URL; ?>">Home</a>
         </li>
         <li class="nav-item">
-          <a class="nav-link" href="<?php echo BASE_URL; ?>about">About</a>
+          <a class="nav-link <?= urlIs(BASE_APP . '/about') ? "active" : "" ?>" href="<?php echo BASE_URL; ?>about">About</a>
         </li>
         <li class="nav-item">
-          <a class="nav-link" href="<?php echo BASE_URL; ?>contact">Contact Us</a>
+          <a class="nav-link <?= urlIs(BASE_APP . '/notes') ? "active" : "" ?>" href="<?php echo BASE_URL; ?>notes">Notes</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link <?= urlIs(BASE_APP . '/contact') ? "active" : "" ?>" href="<?php echo BASE_URL; ?>contact">Contact Us</a>
         </li>
       </ul>
     </div>

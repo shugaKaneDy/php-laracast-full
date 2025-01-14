@@ -3,6 +3,6 @@
 return [
   'database' => [
     "host" => "localhost",
-    "dbname" => "myapp"
+    "dbname" => "notes"
   ]
 ];
