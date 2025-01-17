@@ -1,7 +1,4 @@
 <?php
-
-$uri = parse_url($_SERVER['REQUEST_URI'])['path'];
-
 // dd($uri);
 
 // if($uri === BASE_APP . '/') {
@@ -12,14 +9,7 @@ $uri = parse_url($_SERVER['REQUEST_URI'])['path'];
 //   require "controllers/contact.php";
 // } 
 
-$routes = [
-  BASE_APP . "/" => "controllers/index.php",
-  BASE_APP . "/about" => "controllers/about.php",
-  BASE_APP . "/notes" => "controllers/notes.php",
-  BASE_APP . "/note" => "controllers/note.php",
-  BASE_APP . "/contact" => "controllers/contact.php",
-];
-
+$routes = require('routes.php');
 
 // if(array_key_exists($uri, $routes)) {
 //   require $routes[$uri];
@@ -41,5 +31,5 @@ function abort($code = 404) {
   die();
 }
 
-
+$uri = parse_url($_SERVER['REQUEST_URI'])['path'];
 routToController($uri, $routes);
