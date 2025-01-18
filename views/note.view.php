@@ -7,7 +7,7 @@
     <p class="mb-4">
       <a href="<?= BASE_URL . "notes" ?>">go back ...</a>
     </p>
-    <p><?= $note['body'] ?></p>
+    <p><?= htmlspecialchars($note['body']); ?></p>
   </div>
 </main>
 

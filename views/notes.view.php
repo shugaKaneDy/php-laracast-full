@@ -8,7 +8,7 @@
     <?php foreach($notes as $note): ?>
       <li>
         <a href="<?= BASE_URL . 'note?id=' . $note['id'] ?>">
-          <?= $note['body'] ?>
+          <?= htmlspecialchars($note['body']); ?>
         </a>
       </li>
     <?php endforeach; ?>
